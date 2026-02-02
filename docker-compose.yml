@@ -1,4 +1,4 @@
-name: my_project
+name: OCR-project
 
 services:
   app:
@@ -11,14 +11,14 @@ services:
     container_name: '${COMPOSE_PROJECT_NAME}'
     hostname: app
     volumes:
-      - my_project-data:/data
+      - OCR-project-data:/data
     networks:
-      - my_project-net
+      - OCR-project-net
     ports:
       - 8000:8000
 
 volumes:
-  my_project-data:
+  OCR-project-data:
 
 networks:
-  my_project-net:
+  OCR-project-net:
