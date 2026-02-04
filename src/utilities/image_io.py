@@ -15,3 +15,13 @@ def read_image(file_path: str):
     if image is None:
         raise FileNotFoundError(f"Image not found at path: {file_path}")
     return image
+
+
+def save_image(file_path: str, image) -> None:
+    """
+    Saves an image to the specified file path.
+    Args:
+        file_path (str): The path where the image will be saved.
+        image: The image to be saved.
+    """
+    cv2.imwrite(file_path, image)
